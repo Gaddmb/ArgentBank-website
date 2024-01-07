@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import "../../components/Header/Header.css";
-import argentBankLogo from "";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { logout } from "../../Redux/Actions/user.action";
@@ -20,7 +19,7 @@ const HeaderHome = () => {
       <NavLink to="/" className="main-nav-logo">
         <img
           className="main-nav-logo-image"
-          src={argentBankLogo}
+          src="/img/argentBankLogo.png"
           alt="Argent Bank Logo"
         />
         <h1 className="sr-only">Argent Bank</h1>

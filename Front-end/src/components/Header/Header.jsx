@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import "../../components/Header/Header.css";
-import argentBankLogo from "../../img/argentBankLogo.png";
+import argentBankLogo from "";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { logout } from "../../Redux/Actions/user.action";

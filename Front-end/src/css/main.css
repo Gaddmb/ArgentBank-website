@@ -289,3 +289,10 @@ body {
     width: 200px;
   }
 }
+
+.Button-logout {
+  background-color: #bc3f00;
+  border-color: #bc0000;
+  color: #fff;
+  padding: 5px 10px;
+}

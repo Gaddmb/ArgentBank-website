@@ -18,5 +18,6 @@ const FeaturesSection = ({ features }) => {
     </section>
   );
 };
+console.log("img");
 
 export default FeaturesSection;

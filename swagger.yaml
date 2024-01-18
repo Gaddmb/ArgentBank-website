@@ -1,4 +1,4 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
   title: Bank Argent API documentation
   description: Contains all available API endpoints in this codebase
@@ -31,16 +31,16 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Login Successfully
           schema:
             type: object
             properties:
               token:
                 type: string
-        '400':
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/signup:
     post:
@@ -73,7 +73,7 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Signup Successfully
           schema:
             type: object
@@ -89,9 +89,9 @@ paths:
                     type: string
                   email:
                     type: string
-        '400':
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/profile:
     post:
@@ -102,7 +102,7 @@ paths:
       summary: User Profile API
       description: API for fetching a user profile
       responses:
-        '200':
+        "200":
           description: User profile retrieved successully
           schema:
             type: object
@@ -118,9 +118,9 @@ paths:
                     type: string
                   email:
                     type: string
-        '400':
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
     put:
       security:
@@ -142,7 +142,7 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User profile retrieved successully
           schema:
             type: object
@@ -158,9 +158,9 @@ paths:
                     type: string
                   email:
                     type: string
-        '400':
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/{accountId}/transactions:
     get:
@@ -172,21 +172,21 @@ paths:
       parameters:
         - in: path
           name: accountId
-          description: Id of bank account 
+          description: Id of bank account
           required: true
           type: string
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Successfully retrieval of transactions
-          schema: 
-            type: 'array'
+          schema:
+            type: "array"
             items:
-              $ref: '#/definitions/Transactions'
-        '400':
+              $ref: "#/definitions/Transactions"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /transaction/{transactionId}:
     get:
@@ -198,23 +198,23 @@ paths:
       parameters:
         - in: path
           name: transactionId
-          description: Id of the transaction 
+          description: Id of the transaction
           required: true
           type: string
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Return only transaction selected
           schema:
             $ref: "#/definitions/Transactions"
-        '400':
+        "400":
           description: Bad Request
-        '401':
+        "401":
           description: Unauthorized
-        '404':
+        "404":
           description: Account not found
-        '500':
+        "500":
           description: Unexpected Error
     put:
       security:
@@ -235,13 +235,13 @@ paths:
           schema:
             $ref: "#/definitions/UpdateTransaction"
       responses:
-        '200':
+        "200":
           description: Transaction category updated successfully.
-        '400':
+        "400":
           description: Invalid transaction category data.
-        '401':
+        "401":
           description: Unauthorized.
-        '404':
+        "404":
           description: Transaction not found.
 securityDefinitions:
   Bearer:
@@ -250,10 +250,10 @@ securityDefinitions:
     in: header
 definitions:
   UpdateTransaction:
-    properties: 
+    properties:
       category:
         type: string
-        description: transaction category name 
+        description: transaction category name
       note:
         type: string
         description: transaction note
@@ -264,22 +264,22 @@ definitions:
         description: Transaction date
       description:
         type: string
-        description: user password
+        description: Transaction description
       amount:
         type: string
-        description: user first name
+        description: Transaction amount
       balance:
         type: string
-        description: user last name
+        description: Balance transaction
       type:
         type: string
-        description: user public name
+        description: Transaction type
       category:
         type: string
         description: transaction category
       note:
         type: string
-        description: transaction note
+        description: Note about the transaction
   User:
     properties:
       email:

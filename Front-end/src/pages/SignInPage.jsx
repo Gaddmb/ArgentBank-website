@@ -35,7 +35,6 @@ const SignInPage = () => {
 
     // je Récupère le token depuis la réponse
     const token = await response.json();
-    console.log(response.ok);
 
     // Si la connexion est réussie, dispatch l'action login
     if (response.ok) {

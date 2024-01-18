@@ -24,7 +24,7 @@ const AdminPage = () => {
     }
   }, [user.isConnected, navigate]);
 
-  // qui va mlettre a jour l'etat
+  // qui va mettre a jour l'etat
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
